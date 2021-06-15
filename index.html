@@ -11,7 +11,7 @@
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link href="style/custom.css">
 
-  <title>Hello, world!</title>
+  <title>IT Jobs</title>
 </head>
 
 <body>
@@ -35,7 +35,8 @@
 
           <div class="d-flex">
             <a class="nav-link text-secondary" href="#">Wszystkie oferty</a>
-            <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#newOfferModal">Dodaj ogłoszenie</button>
+            <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#newOfferModal">Dodaj
+              ogłoszenie</button>
           </div>
         </div>
       </div>
@@ -50,8 +51,78 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            ...
+
+            <label for="companyName" class="form-label">Nazwa firmy</label>
+            <div class="input-group mb-3">
+              <input type="text" id="companyName" class="form-control" placeholder="Firma" aria-label="Firma"
+                aria-describedby="Firma" required>
+            </div>
+
+            <label for="street" class="form-label">Ulica i miejscowość</label>
+            <div class="input-group mb-3">
+              <input type="text" id="street" class="form-control" placeholder="Ulica" aria-label="Ulica"
+                aria-describedby="Ulica" required>
+                <input type="text" id="city" class="form-control" placeholder="Miejscowość" aria-label="Miejscowość"
+                aria-describedby="Miejscowość" required>
+            </div>
+
+            <label for="offerName" class="form-label">Nazwa oferty</label>
+            <div class="input-group mb-3">
+              <input type="text" id="offerName" class="form-control" placeholder="Tytuł oferty" aria-label="Tytuł oferty"
+                aria-describedby="Nazwa oferty" required>
+            </div>
+
+            <label for="offerDescription">Opis oferty</label>
+            <div class="input-group mb-3">
+                <textarea class="form-control" placeholder="Tutaj wpisz swój opis" id="offerDescription" required></textarea>
+            </div>
+
+            <label for="companyName" class="form-label">Doświadczenie oraz mozliwa praca zdalna</label>
+            <div class="input-group mb-3">
+              <select class="form-select" aria-label="Doświadczenie">
+                <option selected>Wybierz doświadczenie</option>
+                <option value="junior">Junior</option>
+                <option value="mid">Mid</option>
+                <option value="senior">Senior</option>
+                <option value="architekt">Architekt</option>
+              </select>
+              <select class="form-select" aria-label="Praca zdalna">
+                <option selected>Praca zdalna</option>
+                <option value="remoteTrue">Tak</option>
+                <option value="remoteFalse">Nie</option>
+              </select>
+            </div>
+
+            <label for="technology" class="form-label">Technologia</label>
+            <div class="input-group mb-3">
+              <select class="form-select" aria-label="Technologia">
+                <option selected>Wybierz technologię</option>
+                <option value="php">PHP</option>
+                <option value="javascript">JavaScript</option>
+                <option value="c#">C#</option>
+                <option value="java">Java</option>
+                <option value="ruby">Ruby</option>
+                <option value="others">Inne</option>
+              </select>
+            </div>
+
+            <label for="salaryMin" class="form-label">Pensja</label>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="salaryMin">min. PLN</span>
+              <input type="number" class="form-control" id="salaryMin" aria-describedby="Minimalna pensja" required>
+              <span class="input-group-text" id="salaryMax">max. PLN</span>
+              <input type="number" class="form-control" id="salaryMax" aria-describedby="Maksymalna pensja" required>
+            </div>
+
+            <label for="offerLink" class="form-label">Link do ogłoszenia</label>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" id="offerLink" placeholder="https://google.com" pattern="https://.*" size="30" aria-describedby="Link do ogłoszenia" required>
+            </div>
           </div>
+
+
+
+
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
             <button type="button" class="btn btn-primary">Zapisz zmiany</button>
