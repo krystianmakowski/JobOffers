@@ -15,138 +15,143 @@
 </head>
 
 <body>
-  <div class="container-fluid">
+  <div style="background: url(img/background.jpeg)" class="page-holder bg-cover">
+    <div class="container-fluid">
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">IT Jobs for You</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <span class="nav-link" aria-current="page" href="#">#1 Job Board dla IT w Polsce
-              </span>
-            </li>
-          </ul>
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">IT Jobs for You</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <span class="nav-link" aria-current="page" href="#">#1 Job Board dla IT w Polsce
+                </span>
+              </li>
+            </ul>
 
-          <div class="d-flex">
-            <a class="nav-link text-secondary" href="#">Wszystkie oferty</a>
-            <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#newOfferModal">Dodaj
-              ogłoszenie</button>
+            <div class="d-flex">
+              <a class="nav-link text-secondary" href="#">Wszystkie oferty</a>
+              <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#newOfferModal">Dodaj
+                ogłoszenie</button>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    <!-- MODAL FOR NEW JOB OFFER  -->
-    <div class="modal fade" id="newOfferModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Dodaj ogłoszenie do portalu</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-
-            <label for="companyName" class="form-label">Nazwa firmy</label>
-            <div class="input-group mb-3">
-              <input type="text" id="companyName" class="form-control" placeholder="Firma" aria-label="Firma"
-                aria-describedby="Firma" required>
+      <!-- MODAL FOR NEW JOB OFFER  -->
+      <div class="modal fade" id="newOfferModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Dodaj ogłoszenie do portalu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body">
 
-            <label for="street" class="form-label">Ulica i miejscowość</label>
-            <div class="input-group mb-3">
-              <input type="text" id="street" class="form-control" placeholder="Ulica" aria-label="Ulica"
-                aria-describedby="Ulica" required>
+              <label for="companyName" class="form-label">Nazwa firmy</label>
+              <div class="input-group mb-3">
+                <input type="text" id="companyName" class="form-control" placeholder="Firma" aria-label="Firma"
+                  aria-describedby="Firma" required>
+              </div>
+
+              <label for="street" class="form-label">Ulica i miejscowość</label>
+              <div class="input-group mb-3">
+                <input type="text" id="street" class="form-control" placeholder="Ulica" aria-label="Ulica"
+                  aria-describedby="Ulica" required>
                 <input type="text" id="city" class="form-control" placeholder="Miejscowość" aria-label="Miejscowość"
-                aria-describedby="Miejscowość" required>
+                  aria-describedby="Miejscowość" required>
+              </div>
+
+              <label for="offerName" class="form-label">Nazwa oferty</label>
+              <div class="input-group mb-3">
+                <input type="text" id="offerName" class="form-control" placeholder="Tytuł oferty"
+                  aria-label="Tytuł oferty" aria-describedby="Nazwa oferty" required>
+              </div>
+
+              <label for="offerDescription">Opis oferty</label>
+              <div class="input-group mb-3">
+                <textarea class="form-control" placeholder="Tutaj wpisz swój opis" id="offerDescription"
+                  required></textarea>
+              </div>
+
+              <label for="companyName" class="form-label">Doświadczenie oraz mozliwa praca zdalna</label>
+              <div class="input-group mb-3">
+                <select class="form-select" aria-label="Doświadczenie">
+                  <option selected>Wybierz doświadczenie</option>
+                  <option value="junior">Junior</option>
+                  <option value="mid">Mid</option>
+                  <option value="senior">Senior</option>
+                  <option value="architekt">Architekt</option>
+                </select>
+                <select class="form-select" aria-label="Praca zdalna">
+                  <option selected>Praca zdalna</option>
+                  <option value="remoteTrue">Tak</option>
+                  <option value="remoteFalse">Nie</option>
+                </select>
+              </div>
+
+              <label for="technology" class="form-label">Technologia</label>
+              <div class="input-group mb-3">
+                <select class="form-select" aria-label="Technologia">
+                  <option selected>Wybierz technologię</option>
+                  <option value="php">PHP</option>
+                  <option value="javascript">JavaScript</option>
+                  <option value="c#">C#</option>
+                  <option value="java">Java</option>
+                  <option value="ruby">Ruby</option>
+                  <option value="others">Inne</option>
+                </select>
+              </div>
+
+              <label for="salaryMin" class="form-label">Pensja</label>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="salaryMin">min. PLN</span>
+                <input type="number" class="form-control" id="salaryMin" aria-describedby="Minimalna pensja" required>
+                <span class="input-group-text" id="salaryMax">max. PLN</span>
+                <input type="number" class="form-control" id="salaryMax" aria-describedby="Maksymalna pensja" required>
+              </div>
+
+              <label for="offerLink" class="form-label">Link do ogłoszenia</label>
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" id="offerLink" placeholder="https://google.com"
+                  pattern="https://.*" size="30" aria-describedby="Link do ogłoszenia" required>
+              </div>
             </div>
 
-            <label for="offerName" class="form-label">Nazwa oferty</label>
-            <div class="input-group mb-3">
-              <input type="text" id="offerName" class="form-control" placeholder="Tytuł oferty" aria-label="Tytuł oferty"
-                aria-describedby="Nazwa oferty" required>
+
+
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+              <button type="button" class="btn btn-primary">Zapisz zmiany</button>
             </div>
-
-            <label for="offerDescription">Opis oferty</label>
-            <div class="input-group mb-3">
-                <textarea class="form-control" placeholder="Tutaj wpisz swój opis" id="offerDescription" required></textarea>
-            </div>
-
-            <label for="companyName" class="form-label">Doświadczenie oraz mozliwa praca zdalna</label>
-            <div class="input-group mb-3">
-              <select class="form-select" aria-label="Doświadczenie">
-                <option selected>Wybierz doświadczenie</option>
-                <option value="junior">Junior</option>
-                <option value="mid">Mid</option>
-                <option value="senior">Senior</option>
-                <option value="architekt">Architekt</option>
-              </select>
-              <select class="form-select" aria-label="Praca zdalna">
-                <option selected>Praca zdalna</option>
-                <option value="remoteTrue">Tak</option>
-                <option value="remoteFalse">Nie</option>
-              </select>
-            </div>
-
-            <label for="technology" class="form-label">Technologia</label>
-            <div class="input-group mb-3">
-              <select class="form-select" aria-label="Technologia">
-                <option selected>Wybierz technologię</option>
-                <option value="php">PHP</option>
-                <option value="javascript">JavaScript</option>
-                <option value="c#">C#</option>
-                <option value="java">Java</option>
-                <option value="ruby">Ruby</option>
-                <option value="others">Inne</option>
-              </select>
-            </div>
-
-            <label for="salaryMin" class="form-label">Pensja</label>
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="salaryMin">min. PLN</span>
-              <input type="number" class="form-control" id="salaryMin" aria-describedby="Minimalna pensja" required>
-              <span class="input-group-text" id="salaryMax">max. PLN</span>
-              <input type="number" class="form-control" id="salaryMax" aria-describedby="Maksymalna pensja" required>
-            </div>
-
-            <label for="offerLink" class="form-label">Link do ogłoszenia</label>
-            <div class="input-group mb-3">
-              <input type="text" class="form-control" id="offerLink" placeholder="https://google.com" pattern="https://.*" size="30" aria-describedby="Link do ogłoszenia" required>
-            </div>
-          </div>
-
-
-
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
-            <button type="button" class="btn btn-primary">Zapisz zmiany</button>
           </div>
         </div>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   </div>
 
   <!-- JAVASCRIPT -->
