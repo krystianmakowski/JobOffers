@@ -19,7 +19,7 @@
     <div class="container-fluid">
 
       <!-- NAVBAR -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-lg rounded p-3">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">IT Jobs for You</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -80,16 +80,16 @@
                   required></textarea>
               </div>
 
-              <label for="companyName" class="form-label">Doświadczenie oraz mozliwa praca zdalna</label>
+              <label for="experience" class="form-label">Doświadczenie oraz mozliwa praca zdalna</label>
               <div class="input-group mb-3">
-                <select class="form-select" aria-label="Doświadczenie">
+                <select class="form-select" id="experience" aria-label="Doświadczenie">
                   <option selected>Wybierz doświadczenie</option>
                   <option value="junior">Junior</option>
                   <option value="mid">Mid</option>
                   <option value="senior">Senior</option>
                   <option value="architekt">Architekt</option>
                 </select>
-                <select class="form-select" aria-label="Praca zdalna">
+                <select class="form-select" id="remote" aria-label="Praca zdalna">
                   <option selected>Praca zdalna</option>
                   <option value="remoteTrue">Tak</option>
                   <option value="remoteFalse">Nie</option>
@@ -98,7 +98,7 @@
 
               <label for="technology" class="form-label">Technologia</label>
               <div class="input-group mb-3">
-                <select class="form-select" aria-label="Technologia">
+                <select class="form-select" id="technology" aria-label="Technologia">
                   <option selected>Wybierz technologię</option>
                   <option value="php">PHP</option>
                   <option value="javascript">JavaScript</option>
@@ -129,8 +129,26 @@
 
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
-              <button type="button" class="btn btn-primary">Zapisz zmiany</button>
+              <button type="button" class="btn btn-primary" id="saveOffer" data-bs-dismiss="modal">Zapisz
+                zmiany</button>
             </div>
+          </div>
+        </div>
+      </div>
+      <!-- END CONTAINER -->
+    </div>
+
+    <div class="container">
+
+
+      <div class="px-4 py-5 my-5 text-center bg-light shadow-lg rounded">
+        <img class="d-block mx-auto mb-4" src="img/job-search.png" alt="" width="128" height="128">
+        <h1 class="display-5 fw-bold">IT Jobs for You</h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4">Znajdź swoją pracę w IT, juz teraz! Wykorzystaj ponizsze filtry badz przejrzyj liste
+            ogłoszen i wybierz pracę dla siebie.</p>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+            filtr 1, filtr 2, filtr 3
           </div>
         </div>
       </div>
@@ -139,19 +157,51 @@
 
 
 
+      <div class="accordion" id="listOffers">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              Accordion Item #1
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#listOffers">
+            <div class="accordion-body">
+              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Accordion Item #2
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#listOffers">
+            <div class="accordion-body">
+              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Accordion Item #3
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#listOffers">
+            <div class="accordion-body">
+              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
 
-
-
-
-
-
-
-
-
+      <!-- END CONTAINER -->
     </div>
+    <!-- END BACKGROUND -->
   </div>
 
   <!-- JAVASCRIPT -->
