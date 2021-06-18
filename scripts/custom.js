@@ -100,34 +100,32 @@ const createOffer = () => {
   displayOffers(offers);
 };
 
+const setTechnology = offer => {
+  if (filterTechnology.selectedIndex !== 0) {
+    return offer.technology == filterTechnology.value
+  } else {
+    return offer;
+  }
+};
+
+const setExperience = offer => {
+  if (filterExperience.selectedIndex !== 0) {
+    return offer.experience == filterExperience.value
+  } else {
+    return offer;
+  }
+}
+
+const setSalary = offer => {
+  if (filterSalary.value !== "" && filterSalary.value !== 0) {
+    return filterSalary.value <= offer.salaryMax;
+  } else {
+    return offer;
+  }
+}
 const filterOffers = function (offers) {
-  console.log('dupa');
 
-  function setTechnology(offer) {
-    if (filterTechnology.selectedIndex !== 0) {
-      return offer.technology == filterTechnology.value
-    } else {
-      return offer;
-    }
-  }
-
-  function setExperience(offer) {
-    if (filterExperience.selectedIndex !== 0) {
-      return offer.experience == filterExperience.value
-    } else {
-      return offer;
-    }
-  }
-
-  function setSalary(offer) {
-    if (filterSalary.value !== "" && filterSalary.value !== 0) {
-      return offer.salaryMin >= filterSalary.value
-    } else {
-      return offer;
-    }
-  }
-
-  let filteredOffers = offers.filter(setTechnology).filter(setExperience).filter(setSalary);
+  const filteredOffers = offers.filter(setTechnology).filter(setExperience).filter(setSalary);
 
   displayOffers(filteredOffers);
 };
