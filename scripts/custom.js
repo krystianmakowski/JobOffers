@@ -96,7 +96,7 @@ const createOffer = () => {
     offerLink: offerLink.value
   };
 
-  offers.unshift(newOffer);
+  offers.push(newOffer);
   displayOffers(offers);
 };
 
