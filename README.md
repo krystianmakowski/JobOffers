@@ -1,40 +1,49 @@
-# JobOffers
+# Dokumentacja projektu IT Jobs
+## Opis
+IT Jobs jest aplikacją, dzięki której w łatwy sposób można znaleźć pracę w branży IT. System przedstawia listę aktualnych ofert pracy do firm z całej Polski - na każdą ofertę użytkownik systemu może aplikować. Z drugiej strony - w jeszcze prosty sposób można dodać własną ofertę pracy.
 
-Aplikacja “IT Jobs” - oferty pracy w IT
+## Funkcjonalności
+- wyświetlanie wszystkich ofert pracy,
+- wyświetlanie ofert pracy według technologii oraz wymaganego doświadczenia,
+- sortowanie ofert według wybranej pensji,
+- możliwość dodania oferty pracy do systemu,
+- możliwość aplikowania na daną ofertę pracy (link do oferty na stronie firmy),
+- strzałka, dzięki które można zwijać i rozwijać kontener z ofertą
 
-Obiekt “job” {
-"title":"PHP Developer",
-"street":"Centrum 12",
-"city":"Wrocław",
-"country":"PL",
-"workplace_type":"remote",
-"company_name":"mediawave",
-"company_url":"http://www.mediawave.de",
-"company_logo_url":"ADRES ZDJĘCIA",
-"experience_level":"senior",
-"published_at":"2021-06-03T20:00:07.473Z",
-“descripion”: “Szukamy osób doświadczonych jako PHP Developer”,
-“salary-min”: 7000,
-“salary-max”: 14000,
-“salary-currency”: PLN,
-“apply_link”: “LINK DO OFERTY BĄDŹ ADRESU EMAIL”
+## Potencjalni odbiorcy systemu
+- osoby poszukujące pracy,
+- pracodawcy poszukujący pracownikow do firmy
+
+## Korzyści dla użytkowników systemu
+- znalezienie korzystnej pracy
+- znalezienie pracownika branży IT
+
+## Stos technologiczny
+Javascript oraz Bootstrap
+
+## Przykładowe zastosowane user stories
+- jako pracodawca chciałbym dodać ofertę pracy na portal, gdzie oferta zostanie dodana na samą górę strony,
+- jako osoba poszukująca pracy chciałbym wybrać ofertę z listy, rozwinąć ją i kliknąć przycisk z aplikowaniem na tę ofertę,
+- jako osoba poszukująca pracy chciałbym wyświetlić wszystkie oferty,
+- jako osoba poszukująca pracy chciałbym filtrować oferty po pensji minimalnej jaka mnie interesuje,
+- jako osoba poszukująca pracy chciałbym znaleźć oferty tylko z wybranej kategorii
+
+## Przykładowy obiekt oferty pracy
+```js
+offer = {
+  companyName: "ITLT",
+  street: "Taśmowa 7",
+  city: "Warszawa",
+  offerName: "Senior Java Developer",
+  offerDescription: "IT LeasingTeam realizuje usługi w zakresie pozyskiwania dla organizacji wysokiej klasy specjalistów i kadry zarządzającej z obszaru IT a także rozwija i wdraża nowoczesne rozwiązania IT w ramach outsourcingu procesów",
+  experience: "senior",
+  remote: "tak",
+  technology: "java",
+  salaryMin: 18480,
+  salaryMax: 23520,
+  offerLink: "https://praca.itlt.pl/oferty-pracy/?UID=MjQwOThfMF8xOTY3_0&hrlink_ajax=true&"
 }
+```
 
-Gdzie trzymać obiekty typu job? Albo w tablicy pod zmienną “jobs” w kodzie JS albo w localStorage (co byłoby prostsze).
-
-Funkcjonalności jakie powinny być w aplikacji:
-wyświetlanie wszystkich ofert pracy
-wyświetlanie po kategoriach (np. sam PHP  lub sam Javascript) oraz miejscowościach
-sortowanie ofert pracy po widełkach płacowych
-dodać required na wszystkie pola
-x możliwość dodania oferty pracy
-x możliwość aplikowania na daną ofertę pracy (link do oferty na stronie firmy bądź adres email)
-x przycisk “pokaż więcej”, dzięki któremu odpali się cała oferta (gdzie na dole będzie “zwiń”)
-
-
-User stories:
-jako pracodawca chciałbym dodać ofertę pracy na portal, gdzie oferta zostanie dodana na samą górę strony
-jako user chciałbym wybrać ofertę z listy, rozwinąć ją i kliknąć przycisk z aplikowaniem
-jako user chciałbym wyświetlić wszystkie oferty
-jako user chciałbym filtrować oferty po widełkach płacowych
-jako user chciałbym otrzymać oferty tylko z wybranej kategorii
+## Wykonawcy
+Kamil Pikula oraz Krystian Makowski
