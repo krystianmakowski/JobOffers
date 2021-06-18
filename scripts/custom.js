@@ -18,6 +18,7 @@ const filterSalary = document.querySelector("#filterSalary");
 
 const saveOffer = document.querySelector('#saveOffer');
 const btnFilter = document.querySelector('#btnFilter');
+const btnReset = document.querySelector("#btnReset");
 
 const listOffers = document.querySelector('#listOffers');
 
@@ -109,6 +110,7 @@ const filterOffers = function (offers) {
       return offer;
     }
   }
+
   function setExperience(offer) {
     if (filterExperience.selectedIndex !== 0) {
       return offer.experience == filterExperience.value
@@ -116,8 +118,9 @@ const filterOffers = function (offers) {
       return offer;
     }
   }
+
   function setSalary(offer) {
-    if(filterSalary.value !== "" && filterSalary.value !== 0) {
+    if (filterSalary.value !== "" && filterSalary.value !== 0) {
       return offer.salaryMin >= filterSalary.value
     } else {
       return offer;
@@ -129,50 +132,71 @@ const filterOffers = function (offers) {
   displayOffers(filteredOffers);
 };
 
+const resetFilter = function (offers) {
+  filterTechnology.selectedIndex = 0;
+  filterExperience.selectedIndex = 0;
+  filterSalary.value = "";
+  displayOffers(offers);
+}
+
 const displayOffers = function (offers) {
   listOffers.innerHTML = '';
-  offers.forEach(function (offer, index) {
-    const html = `
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="heading-${index}">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#offer-${index}" aria-expanded="false" aria-controls="#offer-${index}">
-              ${offer.offerName}
-            </button>
-          </h2>
-          <div id="offer-${index}" class="accordion-collapse collapse" aria-labelledby="heading-${index}" data-bs-parent="#listOffers">
-            <div class="accordion-body">
-            <div class="row">
-              <div class="col-sm">
-                <p class="fw-lighter">Firma:</p>
-                ${offer.companyName}<br>${offer.street}<br>${offer.city}<br><br>
-                <p class="fw-lighter">Opis oferty:</p>
-                ${offer.offerDescription}
+  if (offers.length > 0) {
+    offers.forEach(function (offer, index) {
+      const html = `
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading-${index}">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#offer-${index}" aria-expanded="false" aria-controls="#offer-${index}">
+                ${offer.offerName}
+              </button>
+            </h2>
+            <div id="offer-${index}" class="accordion-collapse collapse" aria-labelledby="heading-${index}" data-bs-parent="#listOffers">
+              <div class="accordion-body">
+              <div class="row">
+                <div class="col-sm">
+                  <p class="fw-lighter">Firma:</p>
+                  ${offer.companyName}<br>${offer.street}<br>${offer.city}<br><br>
+                  <p class="fw-lighter">Opis oferty:</p>
+                  ${offer.offerDescription}
+                </div>
+                <div class="col-sm">
+                  <p class="fw-lighter">Doświadczenie:</p>
+                  <span class="text-capitalize">${offer.experience}</span><br><br>
+                  <p class="fw-lighter">Praca zdalna:</p>
+                  <span class="text-capitalize">${offer.remote}</span>
+                </div>
+                <div class="col-sm">
+                  <p class="fw-lighter">Technologia:</p>
+                  <span class="text-uppercase">${offer.technology}</span><br><br>
+                  <p class="fw-lighter">Pensja:</p>
+                  <span class="text-uppercase">${offer.salaryMin} PLN - ${offer.salaryMax} PLN</span><br><br>
+                  <a href="${offer.offerLink}" class="btn btn-primary btn-lg text-uppercase" target="_blank">Aplikuj</a>
+                </div>
               </div>
-              <div class="col-sm">
-                <p class="fw-lighter">Doświadczenie:</p>
-                <span class="text-capitalize">${offer.experience}</span><br><br>
-                <p class="fw-lighter">Praca zdalna:</p>
-                <span class="text-capitalize">${offer.remote}</span>
               </div>
-              <div class="col-sm">
-                <p class="fw-lighter">Technologia:</p>
-                <span class="text-uppercase">${offer.technology}</span><br><br>
-                <p class="fw-lighter">Pensja:</p>
-                <span class="text-uppercase">${offer.salaryMin} PLN - ${offer.salaryMax} PLN</span><br><br>
-                <a href="${offer.offerLink}" class="btn btn-primary btn-lg text-uppercase" target="_blank">Aplikuj</a>
-              </div>
-            </div>
             </div>
           </div>
-        </div>
-        `;
+          `;
 
+      listOffers.insertAdjacentHTML('afterbegin', html);
+    });
+  } else {
+    const html = `
+    <div class="container bg-light d-flex align-items-center rounded" style="height: 52px">
+      <span style="padding-left: 20px">Nie znaleziono ofert! Zmień filtry i znajdź ofertę dla siebie. :)</span>
+    </div>
+    `;
     listOffers.insertAdjacentHTML('afterbegin', html);
-  });
+
+  }
+
 };
 
 displayOffers(offers);
 saveOffer.addEventListener('click', createOffer)
-btnFilter.addEventListener('click', function() {
-  filterOffers(offers)
+btnFilter.addEventListener('click', function () {
+  filterOffers(offers);
 });
+btnReset.addEventListener('click', function() {
+  resetFilter(offers);
+})
