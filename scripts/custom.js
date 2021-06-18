@@ -79,7 +79,21 @@ const offer4 = {
   offerLink: "https://www.crestt.pl/o-nas/praca/net-developer/"
 };
 
-let offers = [offer1, offer2, offer3, offer4]
+const offer5 = {
+  companyName: "Correct Context",
+  street: "Szewska",
+  city: "Wrocław",
+  offerName: "Junior Functional Java Developer",
+  offerDescription: "Join team that loves functional approach, tech excellence and clear solutions to develop highly efficient analytical pipelines with small, independent team that loves to try new things.",
+  experience: "junior",
+  remote: "tak",
+  technology: "java",
+  salaryMin: 6000,
+  salaryMax: 10000,
+  offerLink: "https://praca.correctcontext.com/jobs/1214240-functional-java-developer"
+};
+
+const offers = [offer1, offer2, offer3, offer4, offer5];
 
 const createOffer = () => {
   const newOffer = {
