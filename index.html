@@ -91,8 +91,8 @@
                 </select>
                 <select class="form-select" id="remote" aria-label="Praca zdalna">
                   <option selected>Praca zdalna</option>
-                  <option value="remoteTrue">Tak</option>
-                  <option value="remoteFalse">Nie</option>
+                  <option value="tak">Tak</option>
+                  <option value="nie">Nie</option>
                 </select>
               </div>
 
@@ -140,7 +140,7 @@
 
     <div class="container">
 
-
+      <!-- HERO HEADER -->
       <div class="px-4 py-5 my-5 text-center bg-light shadow-lg rounded">
         <img class="d-block mx-auto mb-4" src="img/job-search.png" alt="" width="128" height="128">
         <h1 class="display-5 fw-bold">IT Jobs for You</h1>
@@ -156,51 +156,39 @@
 
 
 
-
+      <!-- LIST OFFERS -->
       <div class="accordion" id="listOffers">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-              Accordion Item #1
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#listOffers">
-            <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Accordion Item #2
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#listOffers">
-            <div class="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Accordion Item #3
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#listOffers">
-            <div class="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
       </div>
 
 
-
-
+      <div class="container my-5 px-4 py-5 bg-light shadow-lg rounded" id="featured-3">
+        <h2 class="pb-2 border-bottom text-center">Dlaczego my?</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 justify-content-sm-center">
+          <div class="feature col">
+            <div class="w-25 py-2 feature-icon bg-primary bg-gradient rounded text-center">
+              <img src="img/free.svg" class="bi" width="64" height="64">
+            </div>
+            <h2 class="my-4">Darmowe ogłoszenia</h2>
+            <p>W naszym portalu mozesz umieścić ogłoszenia o pracę całkowicie za darmo! Nigdy nie poniesiesz za to kosztów.</p>
+          </div>
+          <div class="feature col">
+            <div class="w-25 py-2 feature-icon bg-primary bg-gradient rounded text-center">
+              <img src="img/specialist.svg" class="bi" width="64" height="64">
+            </div>
+            <h2 class="my-4">Specjaliści</h2>
+            <p>Tutaj znajdziesz tylko oferty dla prawdziwych specjalistów - serwis stworzony z myślą o specach IT.</p>
+          </div>
+        </div>
+      </div>
       <!-- END CONTAINER -->
     </div>
+    
+    <!-- FOOTER -->
+    <footer class="footer mt-auto py-3 bg-light">
+      <div class="container text-center">
+        <span class="text-muted">Wykonanie: Kamil Pikula & Krystian Makowski</span>
+      </div>
+    </footer>
     <!-- END BACKGROUND -->
   </div>
 

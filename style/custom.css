@@ -5,3 +5,7 @@
   .bg-cover {
     background-size: cover !important;
   }
+
+.php-background {
+  background-color: #474A8A;
+}
