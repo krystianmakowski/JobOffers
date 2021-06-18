@@ -12,7 +12,12 @@ const salaryMin = document.querySelector('#salaryMin');
 const salaryMax = document.querySelector('#salaryMax');
 const offerLink = document.querySelector('#offerLink');
 
+const filterTechnology = document.querySelector("#filterTechnology");
+const filterExperience = document.querySelector("#filterExperience");
+const filterSalary = document.querySelector("#filterSalary");
+
 const saveOffer = document.querySelector('#saveOffer');
+const btnFilter = document.querySelector('#btnFilter');
 
 const listOffers = document.querySelector('#listOffers');
 
@@ -94,6 +99,35 @@ const createOffer = () => {
   displayOffers(offers);
 };
 
+const filterOffers = function (offers) {
+  console.log('dupa');
+
+  function setTechnology(offer) {
+    if (filterTechnology.selectedIndex !== 0) {
+      return offer.technology == filterTechnology.value
+    } else {
+      return offer;
+    }
+  }
+  function setExperience(offer) {
+    if (filterExperience.selectedIndex !== 0) {
+      return offer.experience == filterExperience.value
+    } else {
+      return offer;
+    }
+  }
+  function setSalary(offer) {
+    if(filterSalary.value !== "" && filterSalary.value !== 0) {
+      return offer.salaryMin >= filterSalary.value
+    } else {
+      return offer;
+    }
+  }
+
+  let filteredOffers = offers.filter(setTechnology).filter(setExperience).filter(setSalary);
+
+  displayOffers(filteredOffers);
+};
 
 const displayOffers = function (offers) {
   listOffers.innerHTML = '';
@@ -135,7 +169,10 @@ const displayOffers = function (offers) {
 
     listOffers.insertAdjacentHTML('afterbegin', html);
   });
-}
+};
 
 displayOffers(offers);
 saveOffer.addEventListener('click', createOffer)
+btnFilter.addEventListener('click', function() {
+  filterOffers(offers)
+});

@@ -26,9 +26,10 @@ Funkcjonalności jakie powinny być w aplikacji:
 wyświetlanie wszystkich ofert pracy
 wyświetlanie po kategoriach (np. sam PHP  lub sam Javascript) oraz miejscowościach
 sortowanie ofert pracy po widełkach płacowych
-możliwość dodania oferty pracy
-możliwość aplikowania na daną ofertę pracy (link do oferty na stronie firmy bądź adres email)
-przycisk “pokaż więcej”, dzięki któremu odpali się cała oferta (gdzie na dole będzie “zwiń”)
+dodać required na wszystkie pola
+x możliwość dodania oferty pracy
+x możliwość aplikowania na daną ofertę pracy (link do oferty na stronie firmy bądź adres email)
+x przycisk “pokaż więcej”, dzięki któremu odpali się cała oferta (gdzie na dole będzie “zwiń”)
 
 
 User stories:
